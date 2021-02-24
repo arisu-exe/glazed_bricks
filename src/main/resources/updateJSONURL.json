@@ -1,0 +1,10 @@
+{
+  "homepage" : "https://www.curseforge.com/minecraft/mc-mods/glazed-bricks/files",
+  "1.16.4" : {
+    "1.0" : "A bite-sized mod that adds Glazed Bricks, slabs, stairs, and walls."
+  },
+  "promos" : {
+    "1.16.4-latest" : "1.0",
+    "1.16.4-recommended" : "1.0"
+  }
+}
