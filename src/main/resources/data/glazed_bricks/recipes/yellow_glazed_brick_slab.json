@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_brick_slabs",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glazed_bricks:yellow_glazed_bricks"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:yellow_glazed_brick_slab",
+    "count": 6
+  }
+}

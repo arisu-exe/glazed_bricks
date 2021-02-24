@@ -1,0 +1,28 @@
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId="glazed_bricks" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Glazed Bricks" #mandatory
+updateJSONURL="http://myurl.me/" #optional
+displayURL="http://example.com/" #optional
+logoFile="glazed_bricks.png" #optional
+credits="Forge, people who made tutorials, and my friends" #optional
+authors="fallOut015" #optional
+description='''
+A bite-sized mod that adds Glazed Bricks, slabs, stairs, and walls.
+'''
+[[dependencies.glazed_bricks]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[35,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.glazed_bricks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4,1.17)"
+    ordering="NONE"
+    side="BOTH"

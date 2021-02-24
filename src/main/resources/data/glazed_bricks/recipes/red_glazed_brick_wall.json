@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_brick_walls",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "glazed_bricks:red_glazed_bricks"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:red_glazed_brick_wall",
+    "count": 6
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"variants" : {
+    	"" : {
+			"model" : "glazed_bricks:block/yellow_glazed_bricks"
+		}
+	}
+}
