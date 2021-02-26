@@ -1,6 +1,7 @@
 package io.github.fallOut015.glazed_bricks;
 
 import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
+import io.github.fallOut015.glazed_bricks.client.RenderTypeLookupGlazedBricks;
 import io.github.fallOut015.glazed_bricks.item.ItemsGlazedBricks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +35,7 @@ public class MainGlazedBricks {
     private void setup(final FMLCommonSetupEvent event) {
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
+        RenderTypeLookupGlazedBricks.doClientStuff(event);
     }
     private void enqueueIMC(final InterModEnqueueEvent event) {
     }
