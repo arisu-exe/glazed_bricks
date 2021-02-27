@@ -83,6 +83,23 @@ public class ItemsGlazedBricks {
     public static final RegistryObject<Item> RED_GLAZED_BRICK_WALL = ITEMS.register("red_glazed_brick_wall", () -> new BlockItem(BlocksGlazedBricks.RED_GLAZED_BRICK_WALL.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
     public static final RegistryObject<Item> BLACK_GLAZED_BRICK_WALL = ITEMS.register("black_glazed_brick_wall", () -> new BlockItem(BlocksGlazedBricks.BLACK_GLAZED_BRICK_WALL.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
 
+    public static final RegistryObject<Item> WHITE_GLAZED_FLOWER_POT = ITEMS.register("white_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.WHITE_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> ORANGE_GLAZED_FLOWER_POT = ITEMS.register("orange_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.ORANGE_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> MAGENTA_GLAZED_FLOWER_POT = ITEMS.register("magenta_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.MAGENTA_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_BLUE_GLAZED_FLOWER_POT = ITEMS.register("light_blue_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> YELLOW_GLAZED_FLOWER_POT = ITEMS.register("yellow_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.YELLOW_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> LIME_GLAZED_FLOWER_POT = ITEMS.register("lime_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.LIME_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> PINK_GLAZED_FLOWER_POT = ITEMS.register("pink_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.PINK_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> GRAY_GLAZED_FLOWER_POT = ITEMS.register("gray_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.GRAY_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_GRAY_GLAZED_FLOWER_POT = ITEMS.register("light_gray_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> CYAN_GLAZED_FLOWER_POT = ITEMS.register("cyan_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.CYAN_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> PURPLE_GLAZED_FLOWER_POT = ITEMS.register("purple_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.PURPLE_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> BLUE_GLAZED_FLOWER_POT = ITEMS.register("blue_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.BLUE_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> BROWN_GLAZED_FLOWER_POT = ITEMS.register("brown_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.BROWN_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> GREEN_GLAZED_FLOWER_POT = ITEMS.register("green_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.GREEN_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> RED_GLAZED_FLOWER_POT = ITEMS.register("red_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.RED_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+    public static final RegistryObject<Item> BLACK_GLAZED_FLOWER_POT = ITEMS.register("black_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.BLACK_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
+
 
 
     public static void register(IEventBus bus) {

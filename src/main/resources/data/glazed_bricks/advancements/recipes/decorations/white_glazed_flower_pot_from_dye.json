@@ -1,0 +1,32 @@
+{
+	"parent" : "minecraft:recipes/root",
+  	"rewards" : {
+    	"recipes" : [
+      		"glazed_bricks:white_glazed_flower_pot_from_dye"
+    	]
+  	},
+  	"criteria" : {
+    	"has_flower_pot" : {
+      		"trigger" : "minecraft:inventory_changed",
+      		"conditions" : {
+        		"items" : [
+          			{
+            			"item" : "minecraft:flower_pot"
+          			}
+        		]
+      		}
+    	},
+    	"has_the_recipe" : {
+      		"trigger" : "minecraft:recipe_unlocked",
+      		"conditions" : {
+        		"recipe" : "glazed_bricks:white_glazed_flower_pot_from_dye"
+      		}
+    	}
+  	},
+  	"requirements" : [
+    	[
+      		"has_flower_pot",
+      		"has_the_recipe"
+    	]
+  	]
+}

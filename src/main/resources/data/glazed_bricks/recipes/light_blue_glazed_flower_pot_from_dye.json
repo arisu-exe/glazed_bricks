@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_flower_pots",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:flower_pot"
+    },
+    "X": {
+      "item": "minecraft:light_blue_dye"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:light_blue_glazed_flower_pot",
+    "count": 8
+  }
+}
