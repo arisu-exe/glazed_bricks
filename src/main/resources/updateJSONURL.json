@@ -1,11 +1,12 @@
 {
   "homepage" : "https://www.curseforge.com/minecraft/mc-mods/glazed-bricks/files",
   "1.16.4" : {
+    "1.2" : "Added some more languages, individual glazed bricks, and banner recipes.",
     "1.1" : "Added Glazed Flower Pots, along with some texture changes and some more English languages.",
     "1.0" : "A bite-sized mod that adds Glazed Bricks, slabs, stairs, and walls."
   },
   "promos" : {
-    "1.16.4-latest" : "1.1",
-    "1.16.4-recommended" : "1.1"
+    "1.16.4-latest" : "1.2",
+    "1.16.4-recommended" : "1.2"
   }
 }
