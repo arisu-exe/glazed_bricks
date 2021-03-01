@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "glazed_bricks:light_blue_glazed_bricks"
+      "glazed_bricks:cyan_glazed_brick"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "item": "glazed_bricks:light_blue_glazed_brick"
+            "item": "minecraft:brick"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "glazed_bricks:light_blue_glazed_bricks"
+        "recipe": "glazed_bricks:cyan_glazed_brick"
       }
     }
   },
