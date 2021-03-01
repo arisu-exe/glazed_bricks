@@ -100,6 +100,23 @@ public class ItemsGlazedBricks {
     public static final RegistryObject<Item> RED_GLAZED_FLOWER_POT = ITEMS.register("red_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.RED_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
     public static final RegistryObject<Item> BLACK_GLAZED_FLOWER_POT = ITEMS.register("black_glazed_flower_pot", () -> new BlockItem(BlocksGlazedBricks.BLACK_GLAZED_FLOWER_POT.get(), new Item.Properties().group(ItemGroup.DECORATIONS)));
 
+    public static final RegistryObject<Item> WHITE_GLAZED_BRICK = ITEMS.register("white_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> ORANGE_GLAZED_BRICK = ITEMS.register("orange_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> MAGENTA_GLAZED_BRICK = ITEMS.register("magenta_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> LIGHT_BLUE_GLAZED_BRICK = ITEMS.register("light_blue_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> YELLOW_GLAZED_BRICK = ITEMS.register("yellow_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> LIME_GLAZED_BRICK = ITEMS.register("lime_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> PINK_GLAZED_BRICK = ITEMS.register("pink_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> GRAY_GLAZED_BRICK = ITEMS.register("gray_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> LIGHT_GRAY_GLAZED_BRICK = ITEMS.register("light_gray_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> CYAN_GLAZED_BRICK = ITEMS.register("cyan_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> PURPLE_GLAZED_BRICK = ITEMS.register("purple_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BLUE_GLAZED_BRICK = ITEMS.register("blue_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BROWN_GLAZED_BRICK = ITEMS.register("brown_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> GREEN_GLAZED_BRICK = ITEMS.register("green_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> RED_GLAZED_BRICK = ITEMS.register("red_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+    public static final RegistryObject<Item> BLACK_GLAZED_BRICK = ITEMS.register("black_glazed_brick", () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
+
 
 
     public static void register(IEventBus bus) {

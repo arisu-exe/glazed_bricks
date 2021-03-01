@@ -561,5 +561,22 @@
   "block.glazed_bricks.black_glazed_potted_crimson_fungus" : "Black Glazed Potted Crimson Fungus",
   "block.glazed_bricks.black_glazed_potted_warped_fungus" : "Black Glazed Potted Warped Fungus",
   "block.glazed_bricks.black_glazed_potted_crimson_roots" : "Black Glazed Potted Crimson Roots",
-  "block.glazed_bricks.black_glazed_potted_warped_roots" : "Black Glazed Potted Warped Roots"
+  "block.glazed_bricks.black_glazed_potted_warped_roots" : "Black Glazed Potted Warped Roots",
+
+  "item.glazed_bricks.white_glazed_brick" : "White Glazed Brick",
+  "item.glazed_bricks.orange_glazed_brick" : "Orange Glazed Brick",
+  "item.glazed_bricks.magenta_glazed_brick" : "Magenta Glazed Brick",
+  "item.glazed_bricks.light_blue_glazed_brick" : "Light Blue Glazed Brick",
+  "item.glazed_bricks.yellow_glazed_brick" : "Yellow Glazed Brick",
+  "item.glazed_bricks.lime_glazed_brick" : "Lime Glazed Brick",
+  "item.glazed_bricks.pink_glazed_brick" : "Pink Glazed Brick",
+  "item.glazed_bricks.gray_glazed_brick" : "Grey Glazed Brick",
+  "item.glazed_bricks.light_gray_glazed_brick" : "Light Grey Glazed Brick",
+  "item.glazed_bricks.cyan_glazed_brick" : "Cyan Glazed Brick",
+  "item.glazed_bricks.purple_glazed_brick" : "Purple Glazed Brick",
+  "item.glazed_bricks.blue_glazed_brick" : "Blue Glazed Brick",
+  "item.glazed_bricks.brown_glazed_brick" : "Brown Glazed Brick",
+  "item.glazed_bricks.green_glazed_brick" : "Green Glazed Brick",
+  "item.glazed_bricks.red_glazed_brick" : "Red Glazed Brick",
+  "item.glazed_bricks.black_glazed_brick" : "Black Glazed Brick"
 }

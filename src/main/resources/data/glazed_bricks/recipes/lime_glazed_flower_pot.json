@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group" : "stained_flower_pots",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "glazed_bricks:lime_glazed_brick"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:lime_glazed_flower_pot"
+  }
+}
