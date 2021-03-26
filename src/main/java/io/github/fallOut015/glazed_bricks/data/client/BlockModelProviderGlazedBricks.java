@@ -23,11 +23,11 @@ public class BlockModelProviderGlazedBricks extends BlockModelProvider {
     protected void registerModels() {
         for(RegistryObject<Block> block : BlocksGlazedBricks.getEntries()) {
             if(block.get() instanceof FlowerPotBlock) {
-                if(((FlowerPotBlock) block.get()).getFlower() == Blocks.CACTUS) {
+                if(((FlowerPotBlock) block.get()).getContent() == Blocks.CACTUS) {
                     registerPottedCactus((FlowerPotBlock) block.get(), generatedModels);
-                } else if(((FlowerPotBlock) block.get()).getFlower() == Blocks.BAMBOO) {
+                } else if(((FlowerPotBlock) block.get()).getContent() == Blocks.BAMBOO) {
                     registerPottedBamboo((FlowerPotBlock) block.get(), generatedModels);
-                } else if(((FlowerPotBlock) block.get()).getFlower() != Blocks.AIR) {
+                } else if(((FlowerPotBlock) block.get()).getContent() != Blocks.AIR) {
                     registerPottedPlant((FlowerPotBlock) block.get(), generatedModels);
                 }
             }
@@ -48,7 +48,7 @@ public class BlockModelProviderGlazedBricks extends BlockModelProvider {
     }
 
     public BlockModelBuilder pottedPlant(FlowerPotBlock block) {
-        return this.singleTexture(block.getRegistryName().getPath(), new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath() + "_cross"), "plant", new ResourceLocation(block.getFlower().getRegistryName().getNamespace() + ":block/" + block.getFlower().getRegistryName().getPath()));
+        return this.singleTexture(block.getRegistryName().getPath(), new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath() + "_cross"), "plant", new ResourceLocation(block.getContent().getRegistryName().getNamespace() + ":block/" + block.getContent().getRegistryName().getPath()));
     }
     public BlockModelBuilder pottedCactus(FlowerPotBlock block) {
         return this.withExistingParent(block.getRegistryName().getPath(), "minecraft:block/potted_cactus").texture("particle", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath())).texture("flowerpot", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath()));

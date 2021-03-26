@@ -9,7 +9,7 @@ public class FlowerPotBlockGlazedBricks extends FlowerPotBlock {
         super(emptyPot, block, properties);
 
         if(emptyPot != null) {
-            emptyPot.get().addPlant(this.getFlower().getRegistryName(), () -> this);
+            emptyPot.get().addPlant(this.getContent().getRegistryName(), () -> this);
         }
     }
 }

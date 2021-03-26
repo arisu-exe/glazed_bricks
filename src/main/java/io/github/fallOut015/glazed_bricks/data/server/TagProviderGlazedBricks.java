@@ -26,17 +26,17 @@ public class TagProviderGlazedBricks extends TagsProvider<Block> {
         return "Block Tags: " + this.modId;
     }
     @Override
-    protected void registerTags() {
+    protected void addTags() {
         ITag.Builder builder = new ITag.Builder();
         for(RegistryObject<Block> block : BlocksGlazedBricks.getEntries()) {
             if(block.get() instanceof FlowerPotBlock) {
-                builder.addItemEntry(block.get().getRegistryName(), "");
+                builder.addElement(block.get().getRegistryName(), "");
             }
         }
-        this.tagToBuilder.put(new ResourceLocation("tags/blocks/flower_pots.json"), builder);
+        this.builders.put(new ResourceLocation("tags/blocks/flower_pots.json"), builder);
     }
     @Override
-    protected Path makePath(ResourceLocation id) {
+    protected Path getPath(ResourceLocation id) {
         return this.generator.getOutputFolder().resolve(id.getPath()); // TODO fix resolve
     }
 }
