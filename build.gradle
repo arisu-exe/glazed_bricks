@@ -1,29 +1,17 @@
 buildscript {
     repositories {
-<<<<<<< HEAD
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-=======
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
->>>>>>> master
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-<<<<<<< HEAD
 version = '1.3.1'
-=======
-version = '1.3'
->>>>>>> master
 group = 'io.github.fallOut015.glazed_bricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'glazed_bricks'
 
@@ -83,11 +71,7 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
-<<<<<<< HEAD
     minecraft 'net.minecraftforge:forge:1.16.5-36.2.0'
-=======
-    minecraft 'net.minecraftforge:forge:1.16.5-36.1.0'
->>>>>>> master
 }
 
 jar {
@@ -95,11 +79,7 @@ jar {
         attributes([
             "Specification-Title": "glazed_bricks",
             "Specification-Vendor": "fallOut015",
-<<<<<<< HEAD
             "Specification-Version": "1.3.1", // We are version 1 of ourselves
-=======
-            "Specification-Version": "1.3", // We are version 1 of ourselves
->>>>>>> master
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"fallOut015",
