@@ -1,7 +1,13 @@
 package io.github.fallOut015.glazed_bricks.block;
 
 import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.DyeColor;
 import net.minecraftforge.eventbus.api.IEventBus;
