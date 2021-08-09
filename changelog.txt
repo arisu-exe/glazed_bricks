@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Build: 1.16.5-36.2.0 - Thu Jul 22 01:45:10 GMT 2021
 	lexmanos:
 		New 1.16.5 RB.
@@ -374,6 +375,8 @@ Build: 1.16.5-36.1.1 - Wed Mar 17 17:04:46 GMT 2021
 		Fix sign textures being stitched onto every texture atlas (#7690)
 
 =========
+=======
+>>>>>>> master
 Build: 1.16.5-36.1.0 - Mon Mar 15 22:11:58 GMT 2021
 	lexmanos:
 		Fix AT order, missed exec line and bump for RB.
@@ -390,7 +393,11 @@ Build: 1.16.5-36.0.62 - Mon Mar 15 21:02:36 GMT 2021
 
 =========
 Build: 1.16.5-36.0.61 - Mon Mar 15 20:20:21 GMT 2021
+<<<<<<< HEAD
 	sizableshrimp:
+=======
+	29855886+SizableShrimp:
+>>>>>>> master
 		Fix datapack exception related to EnumArgument with siblings (#7686)
 		
 		Invalid enum constants are now properly thrown as a CommandSyntaxException
@@ -419,7 +426,11 @@ Build: 1.16.5-36.0.58 - Sat Mar 13 19:07:24 GMT 2021
 
 =========
 Build: 1.16.5-36.0.55 - Fri Mar 12 18:51:48 GMT 2021
+<<<<<<< HEAD
 	ateranimavis:
+=======
+	AterAnimAvis:
+>>>>>>> master
 		Fix potential Deadlock when using custom Item entities. (#7532)
 		
 		Be careful when adding Entities during Chunk Load (#7519) 
@@ -471,7 +482,11 @@ Build: 1.16.5-36.0.46 - Thu Mar 04 20:15:10 GMT 2021
 
 =========
 Build: 1.16.5-36.0.45 - Wed Mar 03 20:50:47 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	sara:
+>>>>>>> master
 		Fix a few places where the vanilla method was being called instead of the forge one (#7535)
 		
 		Cleanup javadocs references slightly, fix a couple spots not using the proper forge hooks, and remove a couple unneeded patches
@@ -484,7 +499,11 @@ Build: 1.16.5-36.0.44 - Wed Mar 03 05:29:04 GMT 2021
 
 =========
 Build: 1.16.5-36.0.43 - Thu Feb 25 02:37:09 GMT 2021
+<<<<<<< HEAD
 	oriondevelopment:
+=======
+	marc.hermans:
+>>>>>>> master
 		Add support for caching of configuration values. (#7608)
 
 =========
@@ -494,14 +513,22 @@ Build: 1.16.5-36.0.42 - Tue Feb 16 02:43:01 GMT 2021
 
 =========
 Build: 1.16.5-36.0.41 - Tue Feb 16 01:28:51 GMT 2021
+<<<<<<< HEAD
 	knightminer:
+=======
+	knightminer4:
+>>>>>>> master
 		Fix updateItemStackNBT not properly being called (#7646)
 		
 		Re-added ItemStack delegate redirect transformer
 
 =========
 Build: 1.16.5-36.0.40 - Tue Feb 16 01:08:21 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	sara:
+>>>>>>> master
 		Fix a few FluidUtil issues that were causing DispenseFluidContainer to not function properly (#7422)
 
 =========
@@ -538,7 +565,11 @@ Build: 1.16.5-36.0.34 - Mon Feb 15 23:22:40 GMT 2021
 
 =========
 Build: 1.16.5-36.0.33 - Mon Feb 15 23:15:50 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		fix global cache not being a block render type (#7648)
 
 =========
@@ -548,7 +579,11 @@ Build: 1.16.5-36.0.32 - Mon Feb 15 22:52:15 GMT 2021
 
 =========
 Build: 1.16.5-36.0.31 - Mon Feb 15 21:40:16 GMT 2021
+<<<<<<< HEAD
 	shroomdog27:
+=======
+	github:
+>>>>>>> master
 		Add ForgeHooks.canEntitySpawn to Cat, Phantom, and Patrol spawners. (#7569)
 
 =========
@@ -558,7 +593,11 @@ Build: 1.16.5-36.0.30 - Mon Feb 15 21:26:11 GMT 2021
 
 =========
 Build: 1.16.5-36.0.29 - Mon Feb 15 21:16:26 GMT 2021
+<<<<<<< HEAD
 	ateranimavis:
+=======
+	AterAnimAvis:
+>>>>>>> master
 		Fix: Clear the last error from glfwInit to prevent vanilla from throwing an exception later in the chain when glfw errors. (#7587)
 
 =========
@@ -578,7 +617,11 @@ Build: 1.16.5-36.0.26 - Mon Feb 15 03:16:02 GMT 2021
 
 =========
 Build: 1.16.5-36.0.25 - Mon Feb 15 03:10:24 GMT 2021
+<<<<<<< HEAD
 	40846040+telepathicgrunt:
+=======
+	40846040+TelepathicGrunt:
+>>>>>>> master
 		Disable syncing of Feature and Biome registries  (#7639)
 
 =========
@@ -588,7 +631,11 @@ Build: 1.16.5-36.0.24 - Mon Feb 15 03:04:46 GMT 2021
 
 =========
 Build: 1.16.5-36.0.23 - Mon Feb 15 02:36:26 GMT 2021
+<<<<<<< HEAD
 	shroomdog27:
+=======
+	github:
+>>>>>>> master
 		Log stacktraces in NettyPacketEncoder. (#7654)
 
 =========
@@ -598,17 +645,29 @@ Build: 1.16.5-36.0.22 - Wed Feb 10 19:05:16 GMT 2021
 
 =========
 Build: 1.16.5-36.0.21 - Tue Feb 09 22:19:29 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	sara:
+>>>>>>> master
 		Reintroduce forge's chunk manager to allow mods to force chunks with either a block position or entity (UUID) "owner" and have them properly persist between restarts (#7642)
 
 =========
 Build: 1.16.5-36.0.20 - Tue Feb 09 21:28:24 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	sara:
+>>>>>>> master
 		Fix two places where querying an object for the new "valid" capability from a capability invalidation listener could cause the object to return the old invalid capability. (#7643)
 
 =========
 Build: 1.16.5-36.0.19 - Tue Feb 09 21:21:44 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		Fix config spec in cases of enum class discrepancies (#7635)
 
 =========
@@ -628,7 +687,11 @@ Build: 1.16.5-36.0.16 - Tue Feb 09 20:53:48 GMT 2021
 
 =========
 Build: 1.16.5-36.0.15 - Sun Feb 07 03:41:41 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		Fix IAngerable entities crashing when reading nbt on client (#7618)
 
 =========
@@ -641,7 +704,11 @@ Build: 1.16.5-36.0.14 - Tue Feb 02 20:28:08 GMT 2021
 
 =========
 Build: 1.16.5-36.0.13 - Sat Jan 30 02:07:17 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	richard:
+>>>>>>> master
 		Add a block tag to allow mods to blacklist blocks endermen should not be able to place blocks on top of, similar to how vanilla hardcodes against them being able to place things on bedrock (#7548)
 
 =========
@@ -653,22 +720,38 @@ Build: 1.16.5-36.0.12 - Sat Jan 30 02:01:35 GMT 2021
 
 =========
 Build: 1.16.5-36.0.11 - Sat Jan 30 01:35:10 GMT 2021
+<<<<<<< HEAD
 	pupnewfster:
+=======
+	richard:
+>>>>>>> master
 		Fix existing file tag provider support looking in the wrong folder for custom tag types (#7576)
 
 =========
 Build: 1.16.5-36.0.10 - Thu Jan 28 21:07:30 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		Propery re-encode registries (#7629)
 
 =========
 Build: 1.16.5-36.0.9 - Thu Jan 28 01:23:13 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		Properly encode registries. (#7626)
 
 =========
 Build: 1.16.5-36.0.8 - Thu Jan 28 00:00:43 GMT 2021
+<<<<<<< HEAD
 	cyborgmas:
+=======
+	cyborgmas18:
+>>>>>>> master
 		Inject vanilla dimensions inside worlds missing them (#7599)
 
 =========
@@ -694,7 +777,11 @@ Build: 1.16.5-36.0.2 - Tue Jan 26 02:25:10 GMT 2021
 
 =========
 Build: 1.16.5-36.0.1 - Sun Jan 17 21:05:36 GMT 2021
+<<<<<<< HEAD
 	knightminer:
+=======
+	knightminer4:
+>>>>>>> master
 		Optionally add a milk fluid to the vanilla bucket (#7294)
 		
 		Fixes the previous broken code that was supposed to make mod registered milk returned by the vanilla bucket by allowing mods to enable a milk fluid.
@@ -789,7 +876,11 @@ Build: 1.16.4-35.1.21 - Mon Dec 28 21:03:56 GMT 2020
 
 =========
 Build: 1.16.4-35.1.20 - Mon Dec 28 20:19:04 GMT 2020
+<<<<<<< HEAD
 	mrp-v2:
+=======
+	matthrewp:
+>>>>>>> master
 		Fix modded PointOfInterestType's not populating blockstate map when registered (#7503)
 
 	35673674+alcatrazescapee:
@@ -802,7 +893,11 @@ Build: 1.16.4-35.1.18 - Mon Dec 28 20:13:15 GMT 2020
 
 =========
 Build: 1.16.4-35.1.17 - Mon Dec 28 20:01:42 GMT 2020
+<<<<<<< HEAD
 	knightminer:
+=======
+	knightminer4:
+>>>>>>> master
 		Add ItemAttributeModifierEvent (#7484)
 
 =========
@@ -2125,7 +2220,11 @@ Build: 1.16.1-32.0.44 - Thu Jul 02 17:17:45 GMT 2020
 
 =========
 Build: 1.16.1-32.0.43 - Thu Jul 02 12:54:03 GMT 2020
+<<<<<<< HEAD
 	supermartijn642:
+=======
+	martijnvandenbrand:
+>>>>>>> master
 		Include model data in getQuads call (#6884)
 		
 		The model data wasn't included when getting quads from specific sides, but was when getting quads for side = null.
