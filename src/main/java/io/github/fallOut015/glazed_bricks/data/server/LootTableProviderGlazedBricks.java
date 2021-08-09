@@ -1,6 +1,5 @@
 package io.github.fallOut015.glazed_bricks.data.server;
 
-import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
 import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

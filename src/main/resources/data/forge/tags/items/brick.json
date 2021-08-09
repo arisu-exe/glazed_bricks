@@ -1,0 +1,21 @@
+{
+  "replace" : false,
+  "values" : [
+    "glazed_bricks:white_glazed_brick",
+    "glazed_bricks:orange_glazed_brick",
+    "glazed_bricks:magenta_glazed_brick",
+    "glazed_bricks:light_blue_glazed_brick",
+    "glazed_bricks:yellow_glazed_brick",
+    "glazed_bricks:lime_glazed_brick",
+    "glazed_bricks:pink_glazed_brick",
+    "glazed_bricks:gray_glazed_brick",
+    "glazed_bricks:light_gray_glazed_brick",
+    "glazed_bricks:cyan_glazed_brick",
+    "glazed_bricks:purple_glazed_brick",
+    "glazed_bricks:blue_glazed_brick",
+    "glazed_bricks:brown_glazed_brick",
+    "glazed_bricks:green_glazed_brick",
+    "glazed_bricks:red_glazed_brick",
+    "glazed_bricks:black_glazed_brick"
+  ]
+}

@@ -1,6 +1,5 @@
 package io.github.fallOut015.glazed_bricks.data;
 
-import io.github.fallOut015.glazed_bricks.data.client.BlockStateProviderGlazedBricks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

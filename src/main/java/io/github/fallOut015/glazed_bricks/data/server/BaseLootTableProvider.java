@@ -2,13 +2,20 @@ package io.github.fallOut015.glazed_bricks.data.server;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
 import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.SlabBlock;
-import net.minecraft.data.*;
-import net.minecraft.loot.*;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.DirectoryCache;
+import net.minecraft.data.IDataProvider;
+import net.minecraft.data.LootTableProvider;
+import net.minecraft.loot.ConstantRange;
+import net.minecraft.loot.ItemLootEntry;
+import net.minecraft.loot.LootParameterSets;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
+import net.minecraft.loot.LootTableManager;
 import net.minecraft.loot.conditions.BlockStateProperty;
 import net.minecraft.loot.conditions.SurvivesExplosion;
 import net.minecraft.loot.functions.ExplosionDecay;
@@ -94,7 +101,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
             try {
                 IDataProvider.save(GSON, cache, LootTableManager.serialize(lootTable), path);
             } catch (IOException e) {
-                MainGlazedBricks.LOGGER.error("Couldn't write loot table {}", path, e);
+                //MainGlazedBricks.LOGGER.error("Couldn't write loot table {}", path, e);
             }
         });
     }
