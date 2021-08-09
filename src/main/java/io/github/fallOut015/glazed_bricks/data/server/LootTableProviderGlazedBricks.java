@@ -17,7 +17,7 @@ public class LootTableProviderGlazedBricks extends BaseLootTableProvider {
     protected void addTables() {
         for(RegistryObject<Block> block : BlocksGlazedBricks.getEntries()) {
             if(block.get() instanceof FlowerPotBlock) {
-                if(((FlowerPotBlock) block.get()).getFlower() == Blocks.AIR) {
+                if(((FlowerPotBlock) block.get()).getContent() == Blocks.AIR) {
                     buildSurvivesExplosion(block.get(), lootTables);
                 } else {
                     buildPottedPlant((FlowerPotBlock) block.get(), lootTables);

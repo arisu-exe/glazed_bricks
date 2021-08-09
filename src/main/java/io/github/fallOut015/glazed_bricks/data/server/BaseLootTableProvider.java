@@ -34,55 +34,55 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
     protected abstract void addTables();
 
     public static void buildSurvivesExplosion(Block block, final Map<Block, LootTable.Builder> lootTables) {
-        LootPool.Builder builder = LootPool.builder()
-                .rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(block))
-                .acceptCondition(SurvivesExplosion.builder());
+        LootPool.Builder builder = LootPool.lootPool()
+                .setRolls(ConstantRange.exactly(1))
+                .add(ItemLootEntry.lootTableItem(block))
+                .when(SurvivesExplosion.survivesExplosion());
 
-        lootTables.put(block, LootTable.builder().addLootPool(builder));
+        lootTables.put(block, LootTable.lootTable().withPool(builder));
     }
     public static void buildMultiPoolSurvivesExplosion(Block block, Block[] blocks, final Map<Block, LootTable.Builder> lootTables) {
-        LootTable.Builder builder = LootTable.builder();
+        LootTable.Builder builder = LootTable.lootTable();
         for(Block blockEntry : blocks) {
-            LootPool.Builder pool = LootPool.builder()
-                .rolls(ConstantRange.of(1))
-                .addEntry(ItemLootEntry.builder(blockEntry))
-                .acceptCondition(SurvivesExplosion.builder());
-            builder.addLootPool(pool);
+            LootPool.Builder pool = LootPool.lootPool()
+                .setRolls(ConstantRange.exactly(1))
+                .add(ItemLootEntry.lootTableItem(blockEntry))
+                .when(SurvivesExplosion.survivesExplosion());
+            builder.withPool(pool);
         }
         lootTables.put(block, builder);
     }
     public static void buildPottedPlant(FlowerPotBlock block, final Map<Block, LootTable.Builder> lootTables) {
-        buildMultiPoolSurvivesExplosion(block, new Block [] { block.getEmptyPot(), block.getFlower() }, lootTables);
+        buildMultiPoolSurvivesExplosion(block, new Block [] { block.getEmptyPot(), block.getContent() }, lootTables);
     }
 
     public static void buildSlabType(Block block, final Map<Block, LootTable.Builder> lootTables) {
-        LootPool.Builder builder = LootPool.builder()
-                .rolls(ConstantRange.of(1))
-                .addEntry(
-                        ItemLootEntry.builder(
+        LootPool.Builder builder = LootPool.lootPool()
+                .setRolls(ConstantRange.exactly(1))
+                .add(
+                        ItemLootEntry.lootTableItem(
                                 block
-                        ).acceptFunction(
-                                SetCount.builder(
-                                        ConstantRange.of(2)
-                                ).acceptCondition(
-                                        BlockStateProperty.builder(
+                        ).apply(
+                                SetCount.setCount(
+                                        ConstantRange.exactly(2)
+                                ).when(
+                                        BlockStateProperty.hasBlockStateProperties(
                                                 block
-                                        ).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withProp(SlabBlock.TYPE, SlabType.DOUBLE))
+                                        ).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SlabBlock.TYPE, SlabType.DOUBLE))
                                 )
-                        ).acceptFunction(ExplosionDecay.builder())
+                        ).apply(ExplosionDecay.explosionDecay())
                 );
 
-        lootTables.put(block, LootTable.builder().addLootPool(builder));
+        lootTables.put(block, LootTable.lootTable().withPool(builder));
     }
 
     @Override
-    public void act(DirectoryCache cache) {
+    public void run(DirectoryCache cache) {
         addTables();
 
         Map<ResourceLocation, LootTable> tables = new HashMap<>();
         for (Map.Entry<Block, LootTable.Builder> entry : lootTables.entrySet()) {
-            tables.put(entry.getKey().getLootTable(), entry.getValue().setParameterSet(LootParameterSets.BLOCK).build());
+            tables.put(entry.getKey().getLootTable(), entry.getValue().setParamSet(LootParameterSets.BLOCK).build());
         }
         writeTables(cache, tables);
     }
@@ -92,7 +92,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         tables.forEach((key, lootTable) -> {
             Path path = outputFolder.resolve("data/" + key.getNamespace() + "/loot_tables/" + key.getPath() + ".json");
             try {
-                IDataProvider.save(GSON, cache, LootTableManager.toJson(lootTable), path);
+                IDataProvider.save(GSON, cache, LootTableManager.serialize(lootTable), path);
             } catch (IOException e) {
                 MainGlazedBricks.LOGGER.error("Couldn't write loot table {}", path, e);
             }

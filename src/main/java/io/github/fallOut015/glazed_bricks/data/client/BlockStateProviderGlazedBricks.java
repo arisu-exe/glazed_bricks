@@ -39,8 +39,8 @@ public class BlockStateProviderGlazedBricks extends BlockStateProvider {
 
         list.forEach(block -> {
             if(block.get() instanceof FlowerPotBlock) {
-                BlockModelDefinition model = new BlockModelDefinition().replaceInfoValue(BlockModelFields.field_240202_c_, new ResourceLocation(block.get().getRegistryName().getNamespace() + ":block/" + block.get().getRegistryName().getPath()));
-                map.put(block.get(), FinishedVariantBlockState.func_240120_a_(block.get(), model));
+                BlockModelDefinition model = new BlockModelDefinition().with(BlockModelFields.MODEL, new ResourceLocation(block.get().getRegistryName().getNamespace() + ":block/" + block.get().getRegistryName().getPath()));
+                map.put(block.get(), FinishedVariantBlockState.multiVariant(block.get(), model));
             }
         });
 

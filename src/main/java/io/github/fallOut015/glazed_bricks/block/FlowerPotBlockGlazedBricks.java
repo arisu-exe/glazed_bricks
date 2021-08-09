@@ -4,12 +4,15 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FlowerPotBlock;
 
+import javax.annotation.Nullable;
+import java.util.function.Supplier;
+
 public class FlowerPotBlockGlazedBricks extends FlowerPotBlock {
-    public FlowerPotBlockGlazedBricks(@javax.annotation.Nullable java.util.function.Supplier<FlowerPotBlock> emptyPot, java.util.function.Supplier<? extends Block> block, AbstractBlock.Properties properties) {
+    public FlowerPotBlockGlazedBricks(@Nullable Supplier<FlowerPotBlock> emptyPot, Supplier<? extends Block> block, Properties properties) {
         super(emptyPot, block, properties);
 
         if(emptyPot != null) {
-            emptyPot.get().addPlant(this.getFlower().getRegistryName(), () -> this);
+            emptyPot.get().addPlant(this.getContent().getRegistryName(), () -> this);
         }
     }
 }

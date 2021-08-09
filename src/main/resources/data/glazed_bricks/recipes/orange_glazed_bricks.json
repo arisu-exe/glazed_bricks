@@ -1,21 +1,16 @@
 {
-	"type": "minecraft:crafting_shaped",
-  	"group": "stained_bricks",
-  	"pattern": [
-    	"###",
-    	"#X#",
-    	"###"
-  	],
-  	"key": {
-    	"#": {
-      		"item": "minecraft:bricks"
-    	},
-    	"X": {
-      		"item": "minecraft:orange_dye"
-    	}
-  	},
-  	"result": {
-    	"item": "glazed_bricks:orange_glazed_bricks",
-    	"count": 8
-  	}
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_bricks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "glazed_bricks:orange_glazed_brick"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:orange_glazed_bricks"
+  }
 }
