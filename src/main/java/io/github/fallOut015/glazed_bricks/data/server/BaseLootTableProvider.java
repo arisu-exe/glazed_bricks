@@ -8,8 +8,10 @@ import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DirectoryCache;
+import net.minecraft.data.HashCache;
 import net.minecraft.data.IDataProvider;
 import net.minecraft.data.LootTableProvider;
+import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.loot.ConstantRange;
 import net.minecraft.loot.ItemLootEntry;
 import net.minecraft.loot.LootParameterSets;
@@ -20,8 +22,13 @@ import net.minecraft.loot.conditions.BlockStateProperty;
 import net.minecraft.loot.conditions.SurvivesExplosion;
 import net.minecraft.loot.functions.ExplosionDecay;
 import net.minecraft.loot.functions.SetCount;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.state.properties.SlabType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -84,7 +91,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
     }
 
     @Override
-    public void run(DirectoryCache cache) {
+    public void run(HashCache cache) {
         addTables();
 
         Map<ResourceLocation, LootTable> tables = new HashMap<>();
@@ -94,7 +101,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         writeTables(cache, tables);
     }
 
-    private void writeTables(DirectoryCache cache, Map<ResourceLocation, LootTable> tables) {
+    private void writeTables(HashCache cache, Map<ResourceLocation, LootTable> tables) {
         Path outputFolder = this.generator.getOutputFolder();
         tables.forEach((key, lootTable) -> {
             Path path = outputFolder.resolve("data/" + key.getNamespace() + "/loot_tables/" + key.getPath() + ".json");

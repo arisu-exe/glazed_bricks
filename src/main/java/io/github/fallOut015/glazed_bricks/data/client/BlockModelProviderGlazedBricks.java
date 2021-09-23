@@ -1,18 +1,19 @@
 package io.github.fallOut015.glazed_bricks.data.client;
 
 import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
-import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
+import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.util.Map;
+import java.util.Objects;
 
 public class BlockModelProviderGlazedBricks extends BlockModelProvider {
     public BlockModelProviderGlazedBricks(DataGenerator generator, ExistingFileHelper existingFileHelper) {
@@ -38,22 +39,22 @@ public class BlockModelProviderGlazedBricks extends BlockModelProvider {
     }
 
     private void registerPottedPlant(FlowerPotBlock block, final Map<ResourceLocation, BlockModelBuilder> generatedModels) {
-        generatedModels.put(new ResourceLocation(block.getRegistryName().getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedPlant(block));
+        generatedModels.put(new ResourceLocation(Objects.requireNonNull(block.getRegistryName()).getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedPlant(block));
     }
     private void registerPottedCactus(FlowerPotBlock block, final Map<ResourceLocation, BlockModelBuilder> generatedModels) {
-        generatedModels.put(new ResourceLocation(block.getRegistryName().getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedCactus(block));
+        generatedModels.put(new ResourceLocation(Objects.requireNonNull(block.getRegistryName()).getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedCactus(block));
     }
     private void registerPottedBamboo(FlowerPotBlock block, final Map<ResourceLocation, BlockModelBuilder> generatedModels) {
-        generatedModels.put(new ResourceLocation(block.getRegistryName().getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedBamboo(block));
+        generatedModels.put(new ResourceLocation(Objects.requireNonNull(block.getRegistryName()).getNamespace() + ":block/" + block.getRegistryName().getPath()), pottedBamboo(block));
     }
 
     public BlockModelBuilder pottedPlant(FlowerPotBlock block) {
-        return this.singleTexture(block.getRegistryName().getPath(), new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath() + "_cross"), "plant", new ResourceLocation(block.getContent().getRegistryName().getNamespace() + ":block/" + block.getContent().getRegistryName().getPath()));
+        return this.singleTexture(Objects.requireNonNull(block.getRegistryName()).getPath(), new ResourceLocation(Objects.requireNonNull(block.getEmptyPot().getRegistryName()).getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath() + "_cross"), "plant", new ResourceLocation(Objects.requireNonNull(block.getContent().getRegistryName()).getNamespace() + ":block/" + block.getContent().getRegistryName().getPath()));
     }
     public BlockModelBuilder pottedCactus(FlowerPotBlock block) {
-        return this.withExistingParent(block.getRegistryName().getPath(), "minecraft:block/potted_cactus").texture("particle", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath())).texture("flowerpot", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath()));
+        return this.withExistingParent(Objects.requireNonNull(block.getRegistryName()).getPath(), "minecraft:block/potted_cactus").texture("particle", new ResourceLocation(Objects.requireNonNull(block.getEmptyPot().getRegistryName()).getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath())).texture("flowerpot", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath()));
     }
     public BlockModelBuilder pottedBamboo(FlowerPotBlock block) {
-        return this.withExistingParent(block.getRegistryName().getPath(), "minecraft:block/potted_bamboo").texture("particle", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath())).texture("flowerpot", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath()));
+        return this.withExistingParent(Objects.requireNonNull(block.getRegistryName()).getPath(), "minecraft:block/potted_bamboo").texture("particle", new ResourceLocation(Objects.requireNonNull(block.getEmptyPot().getRegistryName()).getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath())).texture("flowerpot", new ResourceLocation(block.getEmptyPot().getRegistryName().getNamespace() + ":block/" + block.getEmptyPot().getRegistryName().getPath()));
     }
 }

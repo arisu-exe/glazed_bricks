@@ -1,9 +1,10 @@
-package io.github.fallOut015.glazed_bricks.block;
+package io.github.fallOut015.glazed_bricks.world.level.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowerPotBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FlowerPotBlock;
 
 import javax.annotation.Nullable;
+import java.util.Objects;
 import java.util.function.Supplier;
 
 public class FlowerPotBlockGlazedBricks extends FlowerPotBlock {
@@ -11,7 +12,7 @@ public class FlowerPotBlockGlazedBricks extends FlowerPotBlock {
         super(emptyPot, block, properties);
 
         if(emptyPot != null) {
-            emptyPot.get().addPlant(this.getContent().getRegistryName(), () -> this);
+            emptyPot.get().addPlant(Objects.requireNonNull(this.getContent().getRegistryName()), () -> this);
         }
     }
 }

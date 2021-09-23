@@ -1,18 +1,16 @@
 package io.github.fallOut015.glazed_bricks.data.server;
 
 import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
-import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
+import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
+import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.TagsProvider;
-import net.minecraft.tags.ITag;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.Tag;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.extensions.IForgeTagBuilder;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 import java.nio.file.Path;
 
@@ -27,7 +25,7 @@ public class TagProviderGlazedBricks extends TagsProvider<Block> {
     }
     @Override
     protected void addTags() {
-        ITag.Builder builder = new ITag.Builder();
+        Tag.Builder builder = new Tag.Builder();
         for(RegistryObject<Block> block : BlocksGlazedBricks.getEntries()) {
             if(block.get() instanceof FlowerPotBlock) {
                 builder.addElement(block.get().getRegistryName(), "");

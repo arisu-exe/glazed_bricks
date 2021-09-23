@@ -1,8 +1,8 @@
 package io.github.fallOut015.glazed_bricks;
 
-import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
-import io.github.fallOut015.glazed_bricks.client.RenderTypeLookupGlazedBricks;
-import io.github.fallOut015.glazed_bricks.item.ItemsGlazedBricks;
+import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
+import io.github.fallOut015.glazed_bricks.client.renderer.ItemBlockRenderTypesGlazedBricks;
+import io.github.fallOut015.glazed_bricks.world.item.ItemsGlazedBricks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -22,6 +22,6 @@ public class MainGlazedBricks {
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        RenderTypeLookupGlazedBricks.doClientStuff(event);
+        ItemBlockRenderTypesGlazedBricks.doClientStuff(event);
     }
 }

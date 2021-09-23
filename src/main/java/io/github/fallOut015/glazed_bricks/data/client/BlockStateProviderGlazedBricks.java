@@ -4,26 +4,23 @@ import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
-import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.data.BlockModelDefinition;
-import net.minecraft.data.BlockModelFields;
-import net.minecraft.data.BlockStateProvider;
+import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
+import net.minecraft.client.renderer.block.model.BlockModelDefinition;
+import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DirectoryCache;
-import net.minecraft.data.FinishedVariantBlockState;
-import net.minecraft.data.IDataProvider;
-import net.minecraft.data.IFinishedBlockState;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.data.HashCache;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -38,7 +35,7 @@ public class BlockStateProviderGlazedBricks extends BlockStateProvider {
         this.gen = gen;
     }
 
-    public void act(DirectoryCache cache) {
+    public void registerStatesAndModels() {
         Path path = this.gen.getOutputFolder();
         Map<Block, IFinishedBlockState> map = Maps.newHashMap();
 
@@ -46,7 +43,7 @@ public class BlockStateProviderGlazedBricks extends BlockStateProvider {
 
         list.forEach(block -> {
             if(block.get() instanceof FlowerPotBlock) {
-                BlockModelDefinition model = new BlockModelDefinition().with(BlockModelFields.MODEL, new ResourceLocation(block.get().getRegistryName().getNamespace() + ":block/" + block.get().getRegistryName().getPath()));
+                BlockModelDefinition model = new BlockModelDefinition().with(BlockModelFields.MODEL, new ResourceLocation(Objects.requireNonNull(block.get().getRegistryName()).getNamespace() + ":block/" + Objects.requireNonNull(block.get().getRegistryName()).getPath()));
                 map.put(block.get(), FinishedVariantBlockState.multiVariant(block.get(), model));
             }
         });
@@ -54,7 +51,7 @@ public class BlockStateProviderGlazedBricks extends BlockStateProvider {
         this.write(cache, path, map, BlockStateProviderGlazedBricks::blockStateResolver);
     }
 
-    private <T> void write(DirectoryCache cache, Path path1, Map<T, ? extends Supplier<JsonElement>> files, BiFunction<Path, T, Path> pathGetter) {
+    private <T> void write(HashCache cache, Path path1, Map<T, ? extends Supplier<JsonElement>> files, BiFunction<Path, T, Path> pathGetter) {
         files.forEach((key, file) -> {
             Path path = pathGetter.apply(path1, key);
 

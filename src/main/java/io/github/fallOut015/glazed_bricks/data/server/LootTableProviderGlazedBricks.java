@@ -1,11 +1,11 @@
 package io.github.fallOut015.glazed_bricks.data.server;
 
-import io.github.fallOut015.glazed_bricks.block.BlocksGlazedBricks;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
+import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraftforge.fmllegacy.RegistryObject;
 
 public class LootTableProviderGlazedBricks extends BaseLootTableProvider {
     public LootTableProviderGlazedBricks(DataGenerator dataGeneratorIn) {
