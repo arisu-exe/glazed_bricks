@@ -2,33 +2,18 @@ package io.github.fallOut015.glazed_bricks.data.server;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.minecraft.advancements.criterion.StatePropertiesPredicate;
-import net.minecraft.block.Block;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DirectoryCache;
 import net.minecraft.data.HashCache;
-import net.minecraft.data.IDataProvider;
-import net.minecraft.data.LootTableProvider;
 import net.minecraft.data.loot.LootTableProvider;
-import net.minecraft.loot.ConstantRange;
-import net.minecraft.loot.ItemLootEntry;
-import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootPool;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTableManager;
-import net.minecraft.loot.conditions.BlockStateProperty;
-import net.minecraft.loot.conditions.SurvivesExplosion;
-import net.minecraft.loot.functions.ExplosionDecay;
-import net.minecraft.loot.functions.SetCount;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.state.properties.SlabType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.EntryGroup;
+import net.minecraft.world.level.storage.loot.predicates.ExplosionCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -49,9 +34,9 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
     public static void buildSurvivesExplosion(Block block, final Map<Block, LootTable.Builder> lootTables) {
         LootPool.Builder builder = LootPool.lootPool()
-                .setRolls(ConstantRange.exactly(1))
+                .setRolls(ConstantValue.exactly(1))
                 .add(ItemLootEntry.lootTableItem(block))
-                .when(SurvivesExplosion.survivesExplosion());
+                .when(ExplosionCondition.survivesExplosion());
 
         lootTables.put(block, LootTable.lootTable().withPool(builder));
     }
@@ -59,9 +44,9 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
         LootTable.Builder builder = LootTable.lootTable();
         for(Block blockEntry : blocks) {
             LootPool.Builder pool = LootPool.lootPool()
-                .setRolls(ConstantRange.exactly(1))
+                .setRolls(ConstantValue.exactly(1))
                 .add(ItemLootEntry.lootTableItem(blockEntry))
-                .when(SurvivesExplosion.survivesExplosion());
+                .when(ExplosionCondition.survivesExplosion());
             builder.withPool(pool);
         }
         lootTables.put(block, builder);
@@ -72,13 +57,13 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
     public static void buildSlabType(Block block, final Map<Block, LootTable.Builder> lootTables) {
         LootPool.Builder builder = LootPool.lootPool()
-                .setRolls(ConstantRange.exactly(1))
+                .setRolls(ConstantValue.exactly(1))
                 .add(
                         ItemLootEntry.lootTableItem(
                                 block
                         ).apply(
                                 SetCount.setCount(
-                                        ConstantRange.exactly(2)
+                                        ConstantValue.exactly(2)
                                 ).when(
                                         BlockStateProperty.hasBlockStateProperties(
                                                 block

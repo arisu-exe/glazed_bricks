@@ -13,7 +13,7 @@ public class DataGeneratorGlazedBricks {
         DataGenerator gen = event.getGenerator();
 
         if(event.includeClient()) {
-            //gen.addProvider(new BlockStateProviderGlazedBricks(gen));
+            //gen.addProvider(new BlockStateProviderGlazedBricks(gen, event.getExistingFileHelper()));
             //gen.addProvider(new BlockModelProviderGlazedBricks(gen, event.getExistingFileHelper()));
         }
 

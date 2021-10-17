@@ -4,6 +4,7 @@ import com.google.common.collect.Maps;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
 import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
 import net.minecraft.client.renderer.block.model.BlockModelDefinition;
 import net.minecraft.core.Registry;
@@ -13,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,8 +32,8 @@ public class BlockStateProviderGlazedBricks extends BlockStateProvider {
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().disableHtmlEscaping().create();
     private final DataGenerator gen;
 
-    public BlockStateProviderGlazedBricks(DataGenerator gen) {
-        super(gen);
+    public BlockStateProviderGlazedBricks(DataGenerator gen, ExistingFileHelper existingFileHelper) {
+        super(gen, MainGlazedBricks.MODID, existingFileHelper);
         this.gen = gen;
     }
 
