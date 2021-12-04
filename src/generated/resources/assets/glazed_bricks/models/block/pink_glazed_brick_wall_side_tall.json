@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "glazed_bricks:block/pink_glazed_bricks"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_bricks",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "glazed_bricks:black_glazed_brick"
+    }
+  },
+  "result": {
+    "item": "glazed_bricks:black_glazed_bricks"
+  }
+}
