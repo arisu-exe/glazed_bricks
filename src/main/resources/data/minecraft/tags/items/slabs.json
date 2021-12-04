@@ -1,6 +1,6 @@
 {
-  "replace" : false,
-  "values" : [
+  "replace": false,
+  "values": [
     "glazed_bricks:white_glazed_brick_slab",
     "glazed_bricks:orange_glazed_brick_slab",
     "glazed_bricks:magenta_glazed_brick_slab",

@@ -37,6 +37,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.WHITE_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.WHITE_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.WHITE_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.WHITE_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.WHITE_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -68,6 +70,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.ORANGE_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -99,6 +103,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.MAGENTA_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -130,6 +136,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_BLUE_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -161,6 +169,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.YELLOW_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -192,6 +202,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIME_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -223,6 +235,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PINK_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -254,6 +268,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GRAY_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -285,6 +301,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.LIGHT_GRAY_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -316,6 +334,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.CYAN_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -347,6 +367,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.PURPLE_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -378,6 +400,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLUE_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -409,6 +433,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BROWN_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -440,6 +466,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.GREEN_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -471,6 +499,8 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.RED_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_FLOWER_POT.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_OAK_SAPLING.get(), RenderType.cutout());
@@ -502,5 +532,7 @@ public class ItemBlockRenderTypesGlazedBricks {
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_WARPED_FUNGUS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_CRIMSON_ROOTS.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_WARPED_ROOTS.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_AZALEA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(BlocksGlazedBricks.BLACK_GLAZED_POTTED_FLOWERING_AZALEA.get(), RenderType.cutout());
     }
 }

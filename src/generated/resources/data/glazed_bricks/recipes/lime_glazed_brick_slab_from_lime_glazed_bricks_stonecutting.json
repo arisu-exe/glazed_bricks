@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "glazed_bricks:lime_glazed_bricks"
+  },
+  "result": "glazed_bricks:lime_glazed_brick_slab",
+  "count": 2
+}

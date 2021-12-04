@@ -1,85 +1,79 @@
 package io.github.fallOut015.glazed_bricks.data.client;
 
-import com.google.common.collect.Maps;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import io.github.fallOut015.glazed_bricks.MainGlazedBricks;
-import io.github.fallOut015.glazed_bricks.world.level.block.BlocksGlazedBricks;
-import net.minecraft.client.renderer.block.BlockModelShaper;
-import net.minecraft.client.renderer.block.model.BlockModelDefinition;
-import net.minecraft.client.resources.model.BlockModelRotation;
-import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.HashCache;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraftforge.client.model.BlockModelConfiguration;
-import net.minecraftforge.client.model.ModelDataManager;
-import net.minecraftforge.client.model.data.IModelData;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.IGeneratedBlockstate;
-import net.minecraftforge.client.model.generators.MultiPartBlockStateBuilder;
-import net.minecraftforge.client.model.generators.VariantBlockStateBuilder;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fmllegacy.RegistryObject;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import java.nio.file.Path;
-import java.util.List;
-import java.util.Map;
 import java.util.Objects;
-import java.util.function.BiFunction;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class BlockStateProviderGlazedBricks extends BlockStateProvider {
-    private static final Logger LOGGER = LogManager.getLogger();
-    private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().disableHtmlEscaping().create();
-    private final DataGenerator gen;
-
-    public BlockStateProviderGlazedBricks(DataGenerator gen, ExistingFileHelper existingFileHelper) {
-        super(gen, MainGlazedBricks.MODID, existingFileHelper);
-        this.gen = gen;
+    public BlockStateProviderGlazedBricks(DataGenerator gen, String modid, ExistingFileHelper exFileHelper) {
+        super(gen, modid, exFileHelper);
     }
 
-    public void registerStatesAndModels() {
-        Path path = this.gen.getOutputFolder();
-
-        Map<Block, IGeneratedBlockstate> map = Maps.newHashMap();
-
-        List<RegistryObject<Block>> list = BlocksGlazedBricks.getEntries().stream().filter(block -> !map.containsKey(block.get())).collect(Collectors.toList());
-
-        list.forEach(block -> {
-            if(block.get() instanceof FlowerPotBlock) {
-                map.put(block.get(), this.getVariantBuilder(block.get()).setModels(null));
-                // TODO
-                //BlockModelDefinition model = new BlockModelDefinition().with(BlockModelFields.MODEL, new ResourceLocation(Objects.requireNonNull(block.get().getRegistryName()).getNamespace() + ":block/" + Objects.requireNonNull(block.get().getRegistryName()).getPath()));
-            }
-        });
-
-        this.write(cache, path, map, BlockStateProviderGlazedBricks::blockStateResolver);
-    }
-
-    private <T> void write(HashCache cache, Path path1, Map<T, ? extends Supplier<JsonElement>> files, BiFunction<Path, T, Path> pathGetter) {
-        files.forEach((key, file) -> {
-            Path path = pathGetter.apply(path1, key);
-
-            try {
-
-                IDataProvider.save(GSON, cache, file.get(), path);
-            } catch (Exception exception) {
-                LOGGER.error("Couldn't save {}", path, exception);
+    @Override
+    protected void registerStatesAndModels() {
+        ForgeRegistries.BLOCKS.getValues().stream().filter(block -> Objects.requireNonNull(block.getRegistryName()).getNamespace().equals(MainGlazedBricks.MODID)).forEach(block -> {
+            String p = Objects.requireNonNull(block.getRegistryName()).getPath();
+            if(p.endsWith("glazed_bricks")) {
+                this.simpleBlock(block);
+            } else if(block instanceof StairBlock) {
+                this.stairsBlock((StairBlock) block, new ResourceLocation(MainGlazedBricks.MODID, "block/" + BlockStateProviderGlazedBricks.getColor(p) + "_glazed_bricks"));
+            } else if(block instanceof SlabBlock) {
+                this.slabBlock((SlabBlock) block, new ResourceLocation(MainGlazedBricks.MODID, BlockStateProviderGlazedBricks.getColor(p) + "_glazed_bricks"), new ResourceLocation(MainGlazedBricks.MODID, "block/" + BlockStateProviderGlazedBricks.getColor(p) + "_glazed_bricks"));
+            } else if(block instanceof WallBlock) {
+                this.wallBlock((WallBlock) block, new ResourceLocation(MainGlazedBricks.MODID, "block/" + BlockStateProviderGlazedBricks.getColor(p) + "_glazed_bricks"));
+            } else if(block instanceof FlowerPotBlock) {
+                if(((FlowerPotBlock) block).getContent() == Blocks.AIR) {
+                    this.emptyFlowerPotBlock((FlowerPotBlock) block, new ResourceLocation(MainGlazedBricks.MODID, "block/" + p));
+                } else {
+                    this.flowerPotBlock((FlowerPotBlock) block, new ResourceLocation("minecraft", BlockStateProviderGlazedBricks.getGlazedSuffix(p)), new ResourceLocation(MainGlazedBricks.MODID, "block/" + BlockStateProviderGlazedBricks.getColor(p) + "_glazed_flower_pot"));
+                }
             }
         });
     }
 
-    private static Path blockStateResolver(Path p_240082_0_, Block p_240082_1_) {
-        ResourceLocation resourcelocation = Registry.BLOCK.getKey(p_240082_1_);
-        return p_240082_0_.resolve("assets/" + resourcelocation.getNamespace() + "/blockstates/" + resourcelocation.getPath() + ".json");
+    private static String getColor(String p) {
+        StringBuilder s = new StringBuilder();
+        for(String t : p.split("_")) {
+            if(t.equals("glazed")) {
+                break;
+            }
+            s.append(t).append("_");
+        }
+        return s.substring(0, s.toString().length() - 1);
+    }
+    private static String getGlazedSuffix(String p) {
+        StringBuilder s = new StringBuilder();
+        boolean append = false;
+        for(String t : p.split("_")) {
+            if(t.equals("glazed")) {
+                append = true;
+                continue;
+            }
+            if(append) {
+                s.append(t).append("_");
+            }
+        }
+        return s.substring(0, s.toString().length() - 1);
+    }
+
+    public void emptyFlowerPotBlock(FlowerPotBlock block, ResourceLocation texture) {
+        this.flowerPotBlock(block, new ResourceLocation("minecraft", "flower_pot"), texture);
+    }
+    public void flowerPotBlock(FlowerPotBlock block, ResourceLocation parent, ResourceLocation texture) {
+        ModelFile modelFile = this.models().withExistingParent(Objects.requireNonNull(block.getRegistryName()).getPath(), parent).texture("particle", texture).texture("flowerpot", texture);
+        ConfiguredModel configuredModel = new ConfiguredModel(modelFile);
+        this.getVariantBuilder(block).partialState().setModels(configuredModel);
     }
 }

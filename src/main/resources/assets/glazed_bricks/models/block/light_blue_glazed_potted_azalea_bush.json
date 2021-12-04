@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/potted_azalea_bush",
+  "textures": {
+    "particle": "glazed_bricks:block/light_blue_glazed_flower_pot",
+    "flowerpot": "glazed_bricks:block/light_blue_glazed_flower_pot"
+  }
+}

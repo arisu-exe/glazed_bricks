@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "glazed_bricks:item/green_glazed_brick"
+  }
+}
