@@ -1,5 +1,8 @@
 {
   "homepage" : "https://www.curseforge.com/minecraft/mc-mods/glazed-bricks/files",
+  "1.18" : {
+    "1.5" : "Ported to 1.18. Made some minor tweaks in the code."
+  },
   "1.17.1" : {
     "1.4" : "Ported to 1.17.1-37.1.0. Added potted azalea and flowering azalea, and fixed some tags."
   },
