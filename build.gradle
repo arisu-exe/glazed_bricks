@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.4'
+version = '1.4.1'
 group = 'io.github.fallOut015.glazed_bricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'glazed_bricks'
 
@@ -75,7 +75,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.1.0'
+    minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
 }
 
 jar {
@@ -83,7 +83,7 @@ jar {
         attributes([
                 "Specification-Title"     : "glazed_bricks",
                 "Specification-Vendor"    : "fallOut015",
-                "Specification-Version"   : "1.4", // We are version 1 of ourselves
+                "Specification-Version"   : "1.4.1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "fallOut015",
