@@ -11,15 +11,15 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.4.1'
+version = '1.5'
 group = 'io.github.fallOut015.glazed_bricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'glazed_bricks'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(16)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'official', version: '1.17.1'
+    mappings channel: 'official', version: '1.18.1'
 
     runs {
         client {
@@ -28,6 +28,8 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
 
             property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'glazed_bricks'
 
             mods {
                 glazed_bricks {
@@ -42,6 +44,24 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
 
             property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'glazed_bricks'
+
+            mods {
+                glazed_bricks {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'glazed_bricks'
 
             mods {
                 glazed_bricks {
@@ -75,7 +95,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.17.1-37.1.1'
+    minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
 }
 
 jar {
@@ -83,7 +103,7 @@ jar {
         attributes([
                 "Specification-Title"     : "glazed_bricks",
                 "Specification-Vendor"    : "fallOut015",
-                "Specification-Version"   : "1.4.1", // We are version 1 of ourselves
+                "Specification-Version"   : "1.5", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "fallOut015",
